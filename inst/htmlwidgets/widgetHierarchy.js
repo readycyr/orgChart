@@ -172,7 +172,7 @@ HTMLWidgets.widget({
       .attr("id", "nodetext")
       .attr("class", "nodeText")
       .attr("y", -x.options.boxHeight/2 + 2*fontSize + 4*lineSpace)
-      .attr("text-anchor", "middle").text('Score: 00');
+      .attr("text-anchor", "middle").text(function(d) { return "Score: "+d.score});
 
      function isRealValue(obj){ 
          return obj && obj !== "null" && obj!== "undefined" && obj!=="";
